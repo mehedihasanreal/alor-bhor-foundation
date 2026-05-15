@@ -1,0 +1,162 @@
+:root {
+    --red: #e8242d;
+    --orange: #f26a21;
+    --green: #1c9d37;
+    --dark: #1d2540
+}
+
+* {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    line-height: 1.7
+}
+
+.brand-logo {
+    width: 54px;
+    height: 54px;
+    object-fit: contain
+}
+
+.navbar .nav-link {
+    font-weight: 600
+}
+
+.hero-section {
+    padding: 110px 0;
+    background: linear-gradient(135deg, rgba(232, 36, 45, .95), rgba(242, 106, 33, .92)), url('../assets/logo.jpg') center/420px no-repeat;
+    color: #fff
+}
+
+.hero-card {
+    background: #fff;
+    color: var(--dark);
+    border-radius: 28px;
+    padding: 45px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .18)
+}
+
+.hero-logo {
+    max-width: 250px;
+    width: 100%
+}
+
+.section-padding {
+    padding: 90px 0
+}
+
+.section-label {
+    color: var(--red);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .85rem
+}
+
+.max-width {
+    max-width: 650px
+}
+
+.info-card,
+.work-card,
+.contact-form {
+    background: #fff;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 12px 35px rgba(29, 37, 64, .08);
+    height: 100%;
+    transition: .3s
+}
+
+.work-section {
+    background: linear-gradient(135deg, var(--green), #0d6830)
+}
+
+.work-section .section-label {
+    color: white;
+}
+
+.info-card:hover,
+.work-card:hover {
+    transform: translateY(-6px)
+}
+
+.info-card i,
+.work-card i {
+    font-size: 2.4rem;
+    color: var(--red);
+    margin-bottom: 16px;
+    display: inline-block
+}
+
+.info-card h3,
+.work-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800
+}
+
+/* .impact-section {
+    background: linear-gradient(135deg, var(--green), #0d6830)
+}
+
+.impact-section h2 {
+    font-weight: 800
+} */
+
+.contact-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin: 18px 0
+}
+
+.contact-item i {
+    color: var(--red);
+    font-size: 1.3rem
+}
+
+.contact-item a {
+    color: var(--dark);
+    text-decoration: none
+}
+
+.contact-item a:hover {
+    color: var(--red)
+}
+
+.form-control {
+    padding: 13px 15px;
+    border-radius: 14px
+}
+
+.btn-danger {
+    background: var(--red);
+    border-color: var(--red)
+}
+
+.btn-danger:hover {
+    background: #c91822;
+    border-color: #c91822
+}
+
+.footer {
+    background: var(--dark);
+    color: #fff
+}
+
+@media(max-width:767px) {
+    .hero-section {
+        padding: 70px 0
+    }
+
+    .section-padding {
+        padding: 60px 0
+    }
+
+    .display-4 {
+        font-size: 2.4rem
+    }
+}

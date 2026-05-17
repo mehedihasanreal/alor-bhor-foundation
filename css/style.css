@@ -25,6 +25,29 @@ body {
     font-weight: 600
 }
 
+.navbar .dropdown-menu {
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(29, 37, 64, .12);
+}
+.navbar .dropdown-item {
+    font-weight: 600;
+    padding: .65rem 1rem;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: rgba(232, 36, 45, .08);
+    color: var(--red);
+}
+
+.anchor-target {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+}
+
 .navbar-toggler {
     border: 0;
     border-radius: 10px;
@@ -118,6 +141,13 @@ body {
         gap: 6px;
     }
 
+    .navbar .dropdown-menu {
+        border-radius: 10px;
+        box-shadow: none;
+        margin: 0 0 6px;
+        padding: 4px;
+    }
+
     .navbar .nav-link {
         border-radius: 10px;
         padding: .75rem .9rem;
@@ -174,6 +204,12 @@ body {
     padding: 90px 0
 }
 
+section,
+[id="current-projects"],
+[id="completed-projects"] {
+    scroll-margin-top: 96px;
+}
+
 .section-label {
     color: var(--red);
     font-weight: 800;
@@ -184,6 +220,38 @@ body {
 
 .max-width {
     max-width: 650px
+}
+
+.content-block {
+    margin-top: 24px;
+}
+
+.content-block h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.section-panel {
+    background: #fff;
+    border: 1px solid rgba(29, 37, 64, .08);
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 12px 35px rgba(29, 37, 64, .06);
+}
+
+.numbered-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.numbered-list li {
+    padding-left: .35rem;
+}
+
+.two-column-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .info-card,
@@ -205,6 +273,76 @@ body {
     color: white;
 }
 
+.project-list-card .section-label {
+    color: var(--red);
+    letter-spacing: 1px;
+}
+
+.project-list-card h3 {
+    margin-bottom: 18px;
+}
+
+.completed-projects-section {
+    background: #f8faf9;
+}
+
+.volunteer-section {
+    background: #f8faf9;
+}
+
+.donate-section {
+    background: linear-gradient(135deg, var(--red), var(--orange));
+    color: #fff;
+}
+
+.donate-section .section-label {
+    color: #fff;
+}
+
+.payment-card {
+    background: #fff;
+    color: var(--dark);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 16px 40px rgba(29, 37, 64, .16);
+}
+
+.payment-card h3,
+.payment-card h4 {
+    font-weight: 800;
+}
+
+.payment-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+}
+
+.payment-card h4 {
+    font-size: 1.05rem;
+    margin: 22px 0 10px;
+}
+
+.payment-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.payment-item i {
+    color: var(--red);
+    font-size: 1.35rem;
+}
+
+.payment-item a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.bank-details p {
+    margin-bottom: 6px;
+}
+
 .info-card:hover,
 .work-card:hover {
     transform: translateY(-6px)
@@ -223,14 +361,6 @@ body {
     font-size: 1.25rem;
     font-weight: 800
 }
-
-/* .impact-section {
-    background: linear-gradient(135deg, var(--green), #0d6830)
-}
-
-.impact-section h2 {
-    font-weight: 800
-} */
 
 .contact-item {
     display: flex;
@@ -253,9 +383,16 @@ body {
     color: var(--red)
 }
 
-.form-control {
+.form-control,
+.form-select {
     padding: 13px 15px;
     border-radius: 14px
+}
+
+@media (max-width: 767px) {
+    .two-column-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .btn-danger {
